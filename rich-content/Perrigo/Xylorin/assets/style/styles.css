@@ -93,7 +93,7 @@
 }
 /* main styles */
 #es-rc #es-rc-content {
-  max-width: 769px;
+  max-width: 960px;
   margin: auto;
   background-color: #ffd416;
   color: #023b76;
@@ -108,11 +108,16 @@
   background-size: 215%;
   background-position: right 20% top 0%;
 }
+@media (min-width: 550px) {
+  #es-rc #es-rc-content .es-kv {
+    background-size: 134%;
+  }
+}
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-kv {
     background-size: 77%;
     background-position: right top;
-    height: 460px;
+    height: 555px;
   }
   #es-rc #es-rc-content .es-kv .es-kv__desktop-wrapper {
     display: flex;
@@ -170,8 +175,7 @@
 }
 #es-rc #es-rc-content .es-kv__flex-container {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
   padding: 2rem;
 }
@@ -220,6 +224,8 @@
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-about {
     flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
 }
 #es-rc #es-rc-content .es-about__single {
@@ -230,7 +236,7 @@
 }
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-about__single {
-    flex-basis: 33%;
+    flex-basis: 30%;
   }
 }
 #es-rc #es-rc-content .es-about__icon {
@@ -243,11 +249,25 @@
   font-size: 1.3rem;
   text-align: center;
 }
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-about__text {
+    height: 4rem;
+  }
+}
+#es-rc #es-rc-content .es-about__text--bold {
+  font-weight: 700;
+  display: block;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-about__text--bold {
+    display: unset;
+  }
+}
 #es-rc #es-rc-content .es-features {
   overflow: hidden;
 }
 #es-rc #es-rc-content .es-features__title-wrapper {
-  background-image: url(/assets/images/features-bg.png);
+  background-image: url("/rich-content/Perrigo/Xylorin/assets/images/features-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 67%;
@@ -484,14 +504,11 @@
   font-style: normal;
   font-size: 1.3rem;
 }
-#es-rc #es-rc-content .es-cross__table button {
-  border-radius: 99px;
-  border: none;
-}
 #es-rc #es-rc-content .es-cross__button {
   font-family: "myriad-pro", sans-serif;
   font-weight: 700;
   font-style: normal;
+  border-radius: 99px;
   background-color: #ffd416;
   padding: 0.4rem 0.8rem;
   font-size: 1.1rem;
@@ -533,7 +550,7 @@
 }
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-cross__info--exclamation:after {
-    bottom: -23%;
+    bottom: -30%;
     left: -9%;
   }
 }

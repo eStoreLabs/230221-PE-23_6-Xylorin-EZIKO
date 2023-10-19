@@ -157,7 +157,7 @@ $size--normal: clamp(1.2rem, 0.9783rem + 1.0435vw, 1.5rem);
 /* main styles */
 
 #es-rc #es-rc-content {
-    max-width: 769px;
+    max-width: 960px;
     margin: auto;
     background-color: $yellow--main;
     color: $blue--main;
@@ -167,11 +167,13 @@ $size--normal: clamp(1.2rem, 0.9783rem + 1.0435vw, 1.5rem);
         background: url(../images/kv-bg.png) no-repeat;
         background-size: 215%;
         background-position: right 20% top 0%;
-
+        @media (min-width: 550px) {
+            background-size: 134%;
+        }
         @media (min-width: 768px) {
             background-size: 77%;
             background-position: right top;
-            height: 460px;
+            height: 555px;
 
             .es-kv__desktop-wrapper {
                 display: flex;
@@ -232,8 +234,7 @@ $size--normal: clamp(1.2rem, 0.9783rem + 1.0435vw, 1.5rem);
 
         &__flex-container {
             display: flex;
-            align-items: center;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 2rem;
             padding: 2rem;
 
@@ -283,6 +284,8 @@ $size--normal: clamp(1.2rem, 0.9783rem + 1.0435vw, 1.5rem);
 
         @media (min-width: 768px) {
             flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
         }
 
         &__single {
@@ -292,7 +295,7 @@ $size--normal: clamp(1.2rem, 0.9783rem + 1.0435vw, 1.5rem);
             gap: 1rem;
 
             @media (min-width: 768px) {
-                flex-basis: 33%;
+                flex-basis: 30%;
             }
         }
 
@@ -304,6 +307,16 @@ $size--normal: clamp(1.2rem, 0.9783rem + 1.0435vw, 1.5rem);
             @include font($ff--main, $fw--regular, $fs--normal);
             font-size: 1.3rem;
             text-align: center;
+            @media (min-width: 768px) {
+                height: 4rem;
+            }
+            &--bold {
+                font-weight: $fw--bold;
+                display: block;
+                @media (min-width: 768px) {
+                    display: unset;
+                }
+            }
         }
     }
 
@@ -311,7 +324,7 @@ $size--normal: clamp(1.2rem, 0.9783rem + 1.0435vw, 1.5rem);
         overflow: hidden;
 
         &__title-wrapper {
-            background-image: url(/assets/images/features-bg.png);
+            background-image: url("/rich-content/Perrigo/Xylorin/assets/images/features-bg.png");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 67%;
@@ -569,13 +582,9 @@ $size--normal: clamp(1.2rem, 0.9783rem + 1.0435vw, 1.5rem);
         font-size: 1.3rem;
     }
 
-    .es-cross__table button {
-        border-radius: 99px;
-        border: none;
-    }
-
     .es-cross__button {
         @include font($ff--main, $fw--bold, $fs--normal);
+        border-radius: 99px;
         background-color: $yellow--main;
         padding: 0.4rem 0.8rem;
         font-size: 1.1rem;
@@ -621,7 +630,7 @@ $size--normal: clamp(1.2rem, 0.9783rem + 1.0435vw, 1.5rem);
                 animation: pulsate-bck 1s ease-in-out infinite alternate both;
 
                 @media (min-width: 768px) {
-                    bottom: -23%;
+                    bottom: -30%;
                     left: -9%;
                 }
             }
